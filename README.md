@@ -16,12 +16,12 @@
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   );
 
-  # versões da dependencias
+# versões da dependencias
   * cors: ^2.8.5
   * express: ^4.18.3
   * pg: ^8.11.3
 
- # FrontEnd
+# FrontEnd
   * axios: ^1.6.7
   * react: ^18.2.0
   * react-dom: ^18.2.0
