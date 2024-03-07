@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
 
-const CadastroCliente = () => {
+const CadastroCliente = (props) => {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
@@ -46,6 +46,8 @@ const CadastroCliente = () => {
                 coordenadaY,
             });
 
+            debugger;
+            props.refresh();
             setModalAberta(false);
             console.log('Cliente cadastrado:', response.data);
         } catch (error) {

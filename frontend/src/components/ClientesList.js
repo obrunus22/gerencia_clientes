@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
+import CadastroCliente from './CadastroCliente';
 
 const ClientesList = () => {
     const [filtro, setFiltro] = useState('');
@@ -55,6 +56,9 @@ const ClientesList = () => {
 
     return (
         <div>
+            <CadastroCliente refresh={fetchClientes} />
+            <br />
+
             <div style={{ border: '1px solid', width: '50%', marginLeft: 'auto', marginRight: 'auto', borderRadius: 5 }}>
                 <h2>Lista de Clientes</h2>
 
@@ -84,7 +88,7 @@ const ClientesList = () => {
                                     <tbody>
                                         {clientes.map((cliente) => (
                                             <tr key={cliente.id}>
-                                                <td>{cliente.id} - {cliente.nome}</td>
+                                                <td>{cliente.nome}</td>
                                                 <td>{cliente.email}</td>
                                                 <td>{cliente.telefone}</td>
                                                 <td align="center">({cliente.coordenada_x} - {cliente.coordenada_y})</td>
